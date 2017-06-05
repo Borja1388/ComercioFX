@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-jun-2017, 11:27:30
+    Author     : Borja
+*/
+
+.tab-pane{
+    -fx-tab-min-width:159px;
+}
+
+.tab-pane .tab{
+    -fx-background-color: #2c5871;
+}
+
+.tab-pane .tab:selected{
+    -fx-background-color: #648ba1;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+}
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #4cc0bf;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    
+}
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #d5f2f0;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+#anchorTienda{
+    -fx-background-image: url('../../imagnes/tienda5.jpg');
+    -fx-background-size: cover;
+}
+#anchorpaneTiendas{
+    -fx-background-image: url('../../imagnes/imagenLogin.png');
+    -fx-background-size: cover;
+}
+#bt_cambiar{
+    -fx-background-image: url('../../imagnes/modificar.png');
+    -fx-background-size: cover;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+#bt_eliminar{
+    -fx-background-image: url('../../imagnes/papelera.png');
+    -fx-background-size: cover;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+#bt_guardar{
+    -fx-background-image: url('../../imagnes/guardar.png');
+    -fx-background-size: cover;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+.label{
+    -fx-text-fill: black;
+    -fx-font-weight:bold;
+    -fx-font-size:16px;
+}
+#ti{
+    -fx-text-fill: white;
+    -fx-font-weight:bold;
+    -fx-font-size:24px;
+}

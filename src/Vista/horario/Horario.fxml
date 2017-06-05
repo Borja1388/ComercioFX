@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.scene.control.*?>
+<?import jfxtras.labs.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchorHorario" fx:id="anchorHorarios" prefHeight="436.0" prefWidth="515.0" stylesheets="@cssHorario.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.horario.HorarioController">
+   <children>
+      <Label id="ho" layoutX="207.0" layoutY="14.0" prefHeight="35.0" prefWidth="101.0" text="Horarios" textFill="#fcf8f8">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="tabPanel" layoutY="57.0" prefHeight="380.0" prefWidth="515.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_infor" onSelectionChanged="#clicarInformacionHorario" text="Informacion Horarios">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="515.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="292.0" prefWidth="515.0">
+                           <columns>
+                              <TableColumn fx:id="table_idHorario" prefWidth="62.0" text="id" />
+                              <TableColumn fx:id="table_horaEntrada1" prefWidth="110.0" text="HoraEntrada" />
+                              <TableColumn fx:id="table_HoraSalida1" prefWidth="90.0" text="HoraSalida" />
+                              <TableColumn fx:id="table_fechaInicio1" prefWidth="109.0" text="FechaInicio" />
+                              <TableColumn fx:id="table_fechaSalida1" prefWidth="143.0" text="FechaSalida" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="bt_cambiar" layoutX="298.0" layoutY="294.0" mnemonicParsing="false" onAction="#cambiarHorario" prefHeight="56.0" prefWidth="57.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bt_eliminar" layoutX="96.0" layoutY="297.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="49.0" prefWidth="49.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_nuevoCambiar" onSelectionChanged="#cambiosTab" text="Nuevo/CambiarHorario">
+            <content>
+              <AnchorPane id="anchorHorario2" fx:id="anchorH" minHeight="0.0" minWidth="0.0" prefHeight="359.0" prefWidth="515.0" stylesheets="@cssHorario.css">
+                     <children>
+                        <Label layoutX="14.0" layoutY="35.0" text="Codigo horario" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="text_idHorario" layoutX="155.0" layoutY="33.0" prefHeight="25.0" prefWidth="76.0" visible="false" />
+                        <Label layoutX="6.0" layoutY="79.0" text="Fecha inicio y hora entrada:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="166.0" text="Fecha fin y hosa salida:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="bt_guardar" layoutX="388.0" layoutY="279.0" mnemonicParsing="false" onAction="#guardar" prefHeight="52.0" prefWidth="53.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bt_guardarCambios" layoutX="246.0" layoutY="216.0" mnemonicParsing="false" onAction="#guardarCambios" text="Guardar cambios">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <LocalDateTimeTextField fx:id="ejemplo" layoutX="231.0" layoutY="79.0" prefHeight="25.0" prefWidth="186.0" />
+                        <LocalDateTimeTextField fx:id="ejemplo2" layoutX="195.0" layoutY="163.0" prefHeight="25.0" prefWidth="183.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

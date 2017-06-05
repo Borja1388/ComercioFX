@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@cssMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.menu.FXMLVistaPrincipalController">
+   <children>
+      <Pane id="panelMenu" layoutY="-6.0" prefHeight="100.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="trabajadores" layoutX="10.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#clicarTrabajadores" prefHeight="90.0" prefWidth="87.0" />
+            <Button fx:id="incidencias" layoutX="138.0" layoutY="15.0" mnemonicParsing="false" onAction="#clicarIncidencias" prefHeight="78.0" prefWidth="77.0" />
+            <Button fx:id="tiendas" layoutX="262.0" layoutY="15.0" mnemonicParsing="false" onAction="#clicarTiendas" prefHeight="78.0" prefWidth="77.0" />
+            <Button fx:id="horario" layoutX="380.0" layoutY="21.0" mnemonicParsing="false" onAction="#clicarHorarios" prefHeight="78.0" prefWidth="77.0" />
+            <Button fx:id="rutas" layoutX="488.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#clicarRutas" prefHeight="78.0" prefWidth="98.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

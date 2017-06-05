@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-jun-2017, 11:21:04
+    Author     : Borja
+*/
+#rutas{
+    -fx-background-image: url('../../imagnes/rutas.png');
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+}
+#horario{
+    -fx-background-image: url('../../imagnes/calendario.png');
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+}
+#incidencias{
+    -fx-background-image: url('../../imagnes/Incidencia.png');
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+}
+#trabajadores{
+    -fx-background-image: url('../../imagnes/trabajadorr.png');
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+}
+#tiendas{
+    -fx-background-image: url('../../imagnes/tienda.png');
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+}
+#AnchorPane{
+    -fx-background-image: url('../../imagnes/fondomenu.jpg');
+    -fx-background-size: cover;
+}
+#panelMenu{
+    -fx-background-color: rgba(46, 88, 113, 0.7);
+}

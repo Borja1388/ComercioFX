@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-jun-2017, 11:32:47
+    Author     : Borja
+*/
+#login{
+    -fx-background-image: url('../../imagnes/llave.png');
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+}
+#paneLogin{
+    -fx-background-image: url('../../imagnes/fondoLogin.jpg');
+    -fx-background-size: cover;
+}
+.text-field {
+    -fx-prompt-text-fill:black;
+    -fx-background-color: transparent , transparent , transparent;
+    -fx-border-color:black;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+    -fx-font-size: 15pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+
+}
+#paneAdmin{
+   -fx-background-image: url('../../imagnes/icono1.png');
+    -fx-background-size: cover; 
+}

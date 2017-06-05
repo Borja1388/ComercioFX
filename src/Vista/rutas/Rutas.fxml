@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchorRuta" prefHeight="577.0" prefWidth="718.0" stylesheets="@cssRutas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.rutas.RutasController">
+   <children>
+      <TabPane layoutY="58.0" prefHeight="519.0" prefWidth="717.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="INSERTAR RUTA">
+            <content>
+              <AnchorPane id="anchorTable" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="id" layoutX="237.0" layoutY="58.0" visible="false" />
+                        <Label fx:id="idRuta" layoutX="128.0" layoutY="62.0" text="IdRuta" visible="false" />
+                        <Label layoutX="124.0" layoutY="46.0" text="Kilometros">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label layoutX="123.0" layoutY="120.0" text="Minutos">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <TextField fx:id="kilometros" layoutX="237.0" layoutY="46.0" />
+                        <TextField fx:id="minutos" layoutX="237.0" layoutY="120.0" />
+                        <TextField fx:id="gastos" layoutX="237.0" layoutY="187.0" />
+                        <Label layoutX="123.0" layoutY="187.0" text="Gastos">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Button fx:id="insertar" layoutX="490.0" layoutY="410.0" mnemonicParsing="false" onMouseClicked="#clicarinsertarRuta" prefHeight="63.0" prefWidth="65.0" />
+                        <Label layoutX="125.0" layoutY="253.0" text="Paradas">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <TextArea fx:id="paradas" layoutX="123.0" layoutY="278.0" prefHeight="131.0" prefWidth="275.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="MODIFICAR RUTA">
+            <content>
+              <AnchorPane id="anchorModif" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@cssRutas.css">
+                     <children>
+                        <Button fx:id="modificar" layoutX="503.0" layoutY="364.0" mnemonicParsing="false" onMouseClicked="#cliclarModificarRuta" prefHeight="77.0" prefWidth="80.0" />
+                        <Label layoutX="133.0" layoutY="241.0" text="Gastos" />
+                        <TextField fx:id="mGastos1" layoutX="294.0" layoutY="241.0" />
+                        <TextField fx:id="mMinutos1" layoutX="294.0" layoutY="166.0" />
+                        <TextField fx:id="mKilometros1" layoutX="294.0" layoutY="100.0" />
+                        <Label layoutX="131.0" layoutY="166.0" text="Minutos" />
+                        <Label layoutX="130.0" layoutY="100.0" text="Kilometros">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Label layoutX="130.0" layoutY="42.0" text="IdRuta">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <TextField fx:id="mId1" layoutX="294.0" layoutY="42.0" />
+                        <Label layoutX="133.0" layoutY="289.0" text="Paradas" />
+                        <TextArea fx:id="paradasModif" layoutX="133.0" layoutY="314.0" prefHeight="132.0" prefWidth="275.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="BORRAR RUTA">
+               <content>
+                  <AnchorPane id="anchorBorrar" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="187.0" layoutY="179.0" text="Id Ruta" />
+                        <TextField fx:id="ruta" layoutX="294.0" layoutY="179.0" />
+                        <Button fx:id="borrarRuta" layoutX="620.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#clicarBorrar" prefHeight="57.0" prefWidth="60.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab onSelectionChanged="#clicarInformacionRuta" text="INFORMACION RUTA">
+               <content>
+                  <AnchorPane id="anchorInfo" minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="725.0">
+                     <children>
+                        <TableView id="tables" fx:id="table" layoutX="73.0" layoutY="105.0" onMouseClicked="#seleccionarRuta" prefHeight="335.0" prefWidth="571.0" stylesheets="@cssRutas.css">
+                          <columns>
+                            <TableColumn fx:id="rutaColum" prefWidth="99.0" text="Id Ruta" />
+                            <TableColumn fx:id="kilometrosColum" prefWidth="107.0" text="Kilometros" />
+                              <TableColumn fx:id="minutosColum" prefWidth="122.0" text="Minutos" />
+                              <TableColumn fx:id="gastosColum" prefWidth="121.0" text="Gastos" />
+                              <TableColumn fx:id="paradasColum1" prefWidth="121.0" text="Paradas" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label id="ru" layoutX="328.0" layoutY="14.0" text="Rutas">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
