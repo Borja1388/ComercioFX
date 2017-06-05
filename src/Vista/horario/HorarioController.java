@@ -122,7 +122,7 @@ public class HorarioController implements Initializable {
     @FXML
     private void guardar(ActionEvent event) {
 
-        idHorario = Integer.valueOf(text_idHorario.getText());
+//        idHorario = Integer.valueOf(text_idHorario.getText());
 
         fecha = ejemplo.getLocalDateTime().toString();
         fecha = fecha + "T" + ejemplo2.getLocalDateTime().toString();

@@ -40,6 +40,25 @@ public class TrabajadorBDA {
         return lista;
     }
     
+    public String  devolverpwd(String dni) throws SQLException {
+        String pwd=null;
+        conn = bda.conectar();
+        List<Trabajador> lista = new ArrayList<>();
+        Trabajador t = null;
+        String consulta = "SELECT * FROM trabajadores where dniNie=?";
+        PreparedStatement ps = conn.prepareStatement(consulta);
+        ps.setString(1, dni);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+//            String dni1 = rs.getString("dniNie");
+            pwd = rs.getString("contraseña");
+//            t = new Trabajador(dni1, nombre);
+//            lista.add(t);
+        }
+        bda.desconectar();
+        return pwd;
+    }
+    
     public List<Trabajador> listarTrabajadores() throws SQLException {
         conn = bda.conectar();
         String consulta = "SELECT * FROM trabajadores";

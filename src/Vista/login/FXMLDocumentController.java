@@ -44,7 +44,7 @@ public class FXMLDocumentController implements Initializable {
     Stage escenario;
     Comercio c;
     BDA b = new BDA();
-    TrabajadorBDA tBDA=new TrabajadorBDA();
+    TrabajadorBDA tBDA = new TrabajadorBDA();
 
     @FXML
     private TextField usuario;
@@ -74,28 +74,31 @@ public class FXMLDocumentController implements Initializable {
     private void clicarLogin(MouseEvent event) throws SQLException, IOException {
         List<Trabajador> lista = new ArrayList<>();
         String dni = usuario.getText();
-        lista = tBDA.consultar(usuario.getText());
-        for (Trabajador t : lista) {
-            if (t.getDNI().equals(dni) && t.getContraseña().equals(contra.getText())) {
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/Vista/menu/Menu.fxml"));
-                Parent root = loader.load();
-                ((FXMLVistaPrincipalController) loader.getController()).setBda(b);
-                escenario = new Stage();
-                escenario.setTitle("Menu principal");
-                escenario.initModality(Modality.APPLICATION_MODAL);
-                escenario.setScene(new Scene(root));
-                Stage stage = (Stage) login.getScene().getWindow();
-                stage.close();
-                escenario.showAndWait();
-            } else if(!t.getDNI().equals(dni) && !t.getContraseña().equals(contra.getText())){
-                Alert a = new Alert(Alert.AlertType.ERROR);
-                a.setTitle("Error");
-                a.setHeaderText("El usuario o contraseña son incorrectos");
-                a.show();
-            }
+//        lista = tBDA.consultar(usuario.getText());
+        String pwd = tBDA.devolverpwd(dni);
+//        for (Trabajador t : lista) {
+//            if (t.getDNI().equals(dni) && t.getContraseña().equals(contra.getText())) {
+        if (pwd != null && pwd.equalsIgnoreCase(contra.getText())) {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/Vista/menu/Menu.fxml"));
+            Parent root = loader.load();
+            ((FXMLVistaPrincipalController) loader.getController()).setBda(b);
+            escenario = new Stage();
+            escenario.setTitle("Menu principal");
+            escenario.initModality(Modality.APPLICATION_MODAL);
+            escenario.setScene(new Scene(root));
+            Stage stage = (Stage) login.getScene().getWindow();
+            stage.close();
+            escenario.showAndWait();
+//            } else if(!t.getDNI().equals(dni) && !t.getContraseña().equals(contra.getText())){
+        } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setTitle("Error");
+            a.setHeaderText("El usuario o contraseña son incorrectos");
+            a.show();
         }
-
     }
 
 }
+
+

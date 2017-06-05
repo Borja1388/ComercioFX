@@ -66,7 +66,7 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="bt_guardarCambios" layoutX="246.0" layoutY="216.0" mnemonicParsing="false" onAction="#guardarCambios" text="Guardar cambios">
+                        <Button id="gc" fx:id="bt_guardarCambios" layoutX="246.0" layoutY="216.0" mnemonicParsing="false" onAction="#guardarCambios" prefHeight="59.0" prefWidth="58.0">
                            <font>
                               <Font size="14.0" />
                            </font>
